@@ -25,7 +25,7 @@ export const CartModal = ({ cartList, setCartList, render, setRender }) => {
          <div role="dialog" className="modal">
             <div className="modal-header">
                <h2>Carrinho de compras</h2>
-               <button aria-label="close" title="Fechar" onClick={closeModal}>
+               <button aria-label="close" title="Fechar" className="modal-close" onClick={closeModal}>
                   <MdClose size={21} />
                </button>
             </div>
@@ -39,7 +39,7 @@ export const CartModal = ({ cartList, setCartList, render, setRender }) => {
             <div>
                <div className="modal-footer">
                   <p>Total {total.toLocaleString('pt-BR', { style: "currency", currency: "BRL"})}</p>
-                  <button onClick={deleteAll}>Remover todos</button>
+                  <button onClick={deleteAll} className="remove-all">Remover todos</button>
                </div>
             </div>
          </div>
